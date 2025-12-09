@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-color: #F5F3E7;
+}
+body{
+    background-color: var(--main-color);
+}
+header {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #8B6F47;
+    /* background-color: #F5F3E7; */
+}
+
+header > nav > picture > img {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: auto;
+    width: 200px;
+    margin: 20px;
+}
+
+header > nav > button{
+    display: none;
+    border: none;
+    background: black;
+    text-align: center;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 90px;
+    height: 50px;
+    margin-top: 10px;
+}
+header > nav > button > a{
+    float: none;
+    margin: auto;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    color: white;   
+}
+main{
+    align-items: center;
+    background-color: var(--main-color);
+
+}
+nav {
+    text-align: center;
+}
+
+section > button{
+    display: none;
+}
+#hero {
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    height: auto;
+    width: 80%;
+    max-width: 1930px;
+}
+
+#hero > img{
+    margin: 20px;
+    width: 600px;
+}
+
+#hero > span{
+    display: flex;
+    align-items: center;
+}
+#hero > span > img{
+    margin: 20px;
+    width: 300px;
+}
+
+#hero > span > h2{
+    font-family: "Jersey 10", sans-serif;
+    color: #2E7D32;
+    font-size: 55px;
+    max-width: 600px;
+    text-align: center;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+span{
+    display: flex;
+    flex-direction: column;
+}
+
+#hero > span > button {
+    display: flex;
+    border: none;
+    background: #114A53;
+    box-shadow: 0px 5px 5px rgb(87, 81, 81);
+    text-align: center;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 140px;
+    height: 50px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+#hero > span > button:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+        box-shadow: 0px 5px 5px rgb(255, 255, 255);
+}
+
+#hero > span > button > a {
+    font-family: "Jersey 10", sans-serif;
+    font-size: 25px;
+    float: none;
+    margin: auto;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+
+}
+
+#topic-bar{
+    background-color: rgb(97, 80, 59);
+    height: 130px;
+}
