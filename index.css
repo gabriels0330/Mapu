@@ -527,11 +527,19 @@ footer > span > a:hover{
         width: 101px !important;
         
     }
+    section > button{
+        display: flex !important;
+        width: 100px;
+        height: 40px;
+    }
     .explore-text{
         width: 100px;
     }
     .explore-text-second{
         width: 100px;
+    }
+    .explore-text-second > h1{
+        width: 50px;
     }
     .h1-explore{
         font-size: 25px;
