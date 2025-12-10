@@ -438,6 +438,12 @@ footer > span > a:hover{
     #hero > span > h2{
         display: none;
     }
+    #hero > span > img{
+        margin-bottom: 0px;
+    }
+    .hero-subtitle{
+        font-size:20px;
+    }
 
     section > h2{
         display: flex !important;
@@ -446,8 +452,8 @@ footer > span > a:hover{
 
     section > button{
         display: flex !important;
-        width: 100px;
-        height: 30px;
+        width: 200px;
+        height: 40px;
     }
 
     #topic-bar{
