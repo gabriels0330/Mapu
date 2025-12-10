@@ -7,6 +7,7 @@
     --main-color: #F5F3E7;
     --brown-border: #8B6F47;
     --text-color-2: #2E7D32;
+    --bar-color: #D9D9D9;
 }
 body{
     background-color: var(--main-color);
@@ -152,7 +153,7 @@ span{
             }
         }
 
-        #hero > span > button:hover {
+#hero > span > button:hover {
             animation-play-state: paused;
             transform: scale(1.5);
             box-shadow:
@@ -160,7 +161,7 @@ span{
                 0 0 50px #b4e7ec,
                 0 0 90px #b4e7ec,
                 0 0 130px #b4e7ec;
-        }
+}
 
 
 #hero > span > button > a {
@@ -180,7 +181,7 @@ span{
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    background-color: rgb(97, 80, 59);
+    background-color: #E6DCC2;
     height: 110px;
     font-family: "Jersey 10", sans-serif;
 }
@@ -264,7 +265,8 @@ span{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: aliceblue;
+    background-color: #F1EAD8;
+    padding-bottom: 20px;
 }
 #mapu-name{
     margin: 20px;
@@ -284,8 +286,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* height: 100px; */
-    background-color: #F5F3E7;
+    background-color: #C1B497;
     justify-content: center;
 }
 
