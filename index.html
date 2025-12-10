@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bitter:ital,wght@0,100..900;1,100..900&family=Dancing+Script:wght@400..700&family=Domine:wght@400..700&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Jersey+10&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Nabla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Iceland&family=Jersey+10&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="index.css">
     <link rel="shortcut icon" href="imgs/favicon/favicon.ico" type="image/x-icon">
+
     <title>Mapu</title>
 </head>
 <body>
@@ -27,7 +28,7 @@
         <section id="hero">
             <span>
                 <img src="imgs/ilustrations/name-mapu.svg" alt="">
-                <h2>Apredendo e descobrindo</h2>
+                <h2>Apredendo e <br> descobrindo</h2>
                 <button onclick="location.href='topico.html'"> <a href="topico.html">COMEÇAR</a></button>
             </span>
 
@@ -36,17 +37,64 @@
         </section>
 
         <div id="topic-bar">
-            <span>
+            <span class="explore-cards">
+                <img src="imgs/icons/icon-globalização.svg" alt="Icone globalização.">
+                <p>Globalização</p>
+            </span>
 
+            <span class="explore-cards">
+                <img src="imgs/icons/icon-sociedade.svg" alt="Icone sociedade.">
+                <p>Sociedade</p>
+            </span>
+
+            <span class="explore-cards">
+                <img src="imgs/icons/icon-meio-ambiente.svg" alt="Icone Meio ambiente.">
+                <p>Meio ambiente</p>
+            </span>
+
+            <span class="explore-cards">
+                <img src="imgs/icons/icon-territorio.svg" alt="Icone Territorio." >
+                <p>Territórios</p>
             </span>
         </div>
 
         <section id="section-explore">
-            <span class="explore-cards">,</span><span class="explore-cards"></span><span class="explore-cards"></span><span class="explore-cards"></span>
+
+                <div class="explore-1">
+                    <span class="explore-text">
+                        <h1 class="h1-explore">Tentar. Aprender. <br>Conhecer.</h1>
+                        <p class="p-explore">A cada questão teste seus conhecimentos. Errou? <br>Tudo bem. Entenda o por quê e continue!</p>
+                    </span>
+                    
+                    <span>
+                        <img id="how-explore-gif" src="imgs/ilustrations/gifs/main-gif.gif" alt="Vídeo de como funciona o Mapu.">
+                    </span>
+                </div>
+
+                <div class="explore-2">
+                    <span class="explore-text-second">
+                        <h1 class="h1-explore">Você no comando do <br> mapa.</h1>
+                        <p class="p-explore">Navegue por questões, descubra <br> novos lugares e prove que, com <br> conhecimento, nenhum território <br> é desconhecido.</p>
+                    </span>
+                    <span>
+                        <img id="how-explore-gif-2" src="imgs/ilustrations/gifs/explore-second-gif.gif" alt="Vídeo de como funciona o Mapu.">
+                    </span>
+                </div>
+        </section>
+        <section id="whats-mapu">
+            <img id="mapu-name" src="imgs/ilustrations/mapu-text.svg" alt="O que é Mapu?">
+            <p class="whats-mapu-p">“Mapu” significa “Terra” no idioma Mapudungun, falado pelo povo Mapuche da América do Sul, um termo que carrega identidade, território e ancestralidade.</p>
+            <p class="whats-mapu-p">E é a partir dessa conexão profunda com a terra que nasce nosso jogo: Mapu é o seu desafio para conhecer, explorar e dominar o mapa.</p>
+            <p class="whats-mapu-p">Aqui, você não só aprende geografia: você se conecta com os lugares, as culturas e as histórias que formam o mundo. Cada pergunta é uma viagem. Cada acerto, uma conquista. Cada estrela, uma prova do seu saber.</p>
         </section>
     </main>
+    
     <footer>
-
+        <h1>Quer entender melhor o projeto? Venha nós conhecer!</h1>
+        <span>
+            <img id="icon-github" src="imgs/icons/Github-icon-footer.svg" alt="Ícone do Github.">
+            <a href="https://github.com/gabriels0330/Mapu">Repositório do Mapu</a>
+        </span>
     </footer>
 </body>
 </html>
