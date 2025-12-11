@@ -1,4 +1,4 @@
-#[Mapu](https://gabriels0330.github.io/mapu/) 
+# [Mapu](https://gabriels0330.github.io/mapu/)
 
 🌐 MAPU — Jogo de Geografia Interativo
 
