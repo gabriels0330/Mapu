@@ -465,7 +465,8 @@ footer > span > a:hover{
     }
 
     .explore-cards > img{
-        height: 40px;
+        height: 35px;
+        width: auto;
     }
     .explore-text-second{
         margin-right: 0px;
