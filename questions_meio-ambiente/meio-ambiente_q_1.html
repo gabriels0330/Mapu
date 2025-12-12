@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imgs/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../for_quiz_model-1.css">
+    <link rel="stylesheet" href="../border.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iceland&family=Jersey+10&display=swap" rel="stylesheet">
+
+    <script src="for_quiz.js"></script>
+    <title>Mapu | Meio ambietne</title>
+</head>
+<body data-question-number="1" data-total-questions="10">
+    <header>
+        
+        <div class="results">
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+            </div>
+            <span id="result-container">
+                <div class="result-item">Perguntas: <span id="totalAnswered"> 0</span>/10</div>
+                <div class="result-item">Acertos: <span id="correctCount"> 0</span></div>
+            </span>
+        </div>
+        <span id="question-title">O Protocolo de Montreal ficou conhecido principalmente por:</span>
+    </header>
+    <main>
+        <div class="container">
+            <div class="cards explore-cards" data-answer="incorrect">
+                <img src="../imgs/ilustrations/q_1_a/menos-co2.png" alt="Área de Livre Comércio das Américas">
+                <p>Reduzir emissões de CO₂</p>
+            </div>
+
+            <div class="cards explore-cards" data-answer="correct">
+                <img src="../imgs/ilustrations/q_1_a/ozonio.png" alt="União europeia">
+                <p>Proteger a camada de ozônio</p>
+            </div>
+
+            <div class="cards explore-cards" data-answer="incorrect">
+                <img src="../imgs/ilustrations/q_1_a/tropical.png" alt="Organização dos Países Exportadores de Petróleo">
+                <p>Conservar florestas tropicais</p>
+            </div>
+
+            <div class="cards explore-cards" data-answer="incorrect">
+                <img src="../imgs/ilustrations/q_1_a/pesca.png" alt="Mercosul">
+                <p>Controlar a pesca internacional</p>
+            </div>
+        </div>
+    </main>
+
+    <div class="check">
+        <button type="button" id="jump_button">Pular</button>
+        <div id="check_circle_content"></div>
+        <div id="resolution"><p>O PROTOCOLO DE MONTREAL TORNOU-SE REFERÊNCIA MUNDIAL POR ELIMINAR SUBSTÂNCIAS QUE DESTRUÍAM A CAMADA DE OZÔNIO.</p></div>
+        <button id="next" type="button" disabled>CONFERIR</button>
+        
+    </div>
+
+    <audio id="audioCorrect" src="../imgs/sond-efects/success.mp3"></audio>
+    <audio id="audioIncorrect" src="../imgs/sond-efects/failure.mp3"></audio>
+</body>
+</html>

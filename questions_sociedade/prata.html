@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iceland&family=Jersey+10&display=swap" rel="stylesheet">
+
+<title>Mapu - Resultado Final</title>
+
+<style>
+/* ====== PALETA ======
+#F5F3E7 – fundo claro
+#1B2A41 – azul profundo
+#0B5D52 – verde escuro
+#41E18E – verde neon suave
+======================= */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #F5F3E7;
+    font-family: 'Trebuchet MS', sans-serif;
+    overflow: hidden;
+    color: #1B2A41;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ====== CAMADAS ====== */
+.particles, .energy-rings {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* ====== ANÉIS DE ENERGIA ====== */
+.energy-ring {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 6px solid #c09b51e2;
+    border-radius: 50%;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: pulse 4s infinite ease-out;
+}
+
+.energy-ring:nth-child(2) { animation-delay: 1s; }
+.energy-ring:nth-child(3) { animation-delay: 2s; }
+.energy-ring:nth-child(4) { animation-delay: 3s; }
+
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(0); opacity: 0.8; }
+    100% { transform: translate(-50%, -50%) scale(3); opacity: 0; }
+}
+
+/* ====== PARTÍCULAS ====== */
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: rise 5s linear forwards;
+    opacity: 0.9;
+}
+
+@keyframes rise {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(-200vh); opacity: 0; }
+}
+
+/* ====== CONTEÚDO ====== */
+.end-screen {
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 5;
+    background: rgba(245, 243, 231, 0.8); /* Fundo suave para leitura */
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 30px rgba(11, 93, 82, 0.1);
+    max-width: 600px;
+    width: 90%;
+}
+
+/* Título */
+.end-title {
+    font-size: 60px;
+    font-family: "Jersey 10", sans-serif;
+    font-weight: bold;
+    margin: 0 0 15px 0;
+    color: #0B5D52;
+    text-shadow: 0 0 20px #41E18E;
+    animation: titlePop 0.8s ease-out;
+}
+
+@media (max-width: 500px) {
+    .end-title { font-size: 45px; }
+    .star { font-size: 50px; }
+}
+
+@keyframes titlePop {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Estrelas com explosão */
+.stars {
+    margin: 25px 0;
+}
+
+.star {
+    font-size: 75px;
+    opacity: 0.2;
+    margin: 0 5px;
+    color: #FFD700;
+    transition: 0.4s;
+    display: inline-block;
+}
+
+.star.active {
+    opacity: 1;
+    text-shadow: 0 0 25px #FFD700, 0 0 40px #FFF2A0;
+    animation: explode 0.8s ease-out;
+}
+
+@keyframes explode {
+    0% { transform: scale(0) rotate(180deg); }
+    70% { transform: scale(1.6); }
+    100% { transform: scale(1); }
+}
+
+/* Texto dos acertos */
+.feedback-info {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #1B2A41;
+}
+
+.feedback {
+    font-size: 22px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #0B5D52;
+    min-height: 30px;
+}
+
+/* Botões */
+.button-row {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 15px 32px;
+    border: none;
+    border-radius: 18px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    background: #0B5D52;
+    box-shadow: 0 0 18px #0B5D5275;
+    transition: 0.2s;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background: #094b43;
+    box-shadow: 0 0 25px #0B5D52;
+}
+
+.btn.secondary {
+    background: #1B2A41;
+}
+
+.btn.secondary:hover {
+    background: #152131;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="energy-rings">
+    <div class="energy-ring"></div>
+    <div class="energy-ring"></div>
+    <div class="energy-ring"></div>
+    <div class="energy-ring"></div>
+</div>
+
+<div class="particles"></div>
+
+<div class="end-screen">
+
+    <h1 class="end-title">Desafio Concluído!</h1>
+
+    <div class="stars">
+        <span class="star" id="s1">★</span>
+        <span class="star" id="s2">★</span>
+        <span class="star" id="s3">★</span>
+    </div>
+
+    <div class="feedback-info">
+        Acertos: <span id="correctCount">0</span> / <span id="totalCount">10</span>
+    </div>
+
+    <p class="feedback" id="feedbackMsg"></p>
+
+    <div class="button-row">
+        <button class="btn" onclick="retry()">REVANCHE</button>
+        <button class="btn secondary" onclick="menu()">EXPLORAR MAIS</button>
+    </div>
+
+</div>
+
+<script>
+/* SOM */
+// Usando sons online para garantir que funcione sem você precisar baixar arquivos
+const winSound = new Audio("https://actions.google.com/sounds/v1/cartoon/cartoon_boing.ogg"); 
+const clickSound = new Audio("https://actions.google.com/sounds/v1/cartoon/pop.ogg");
+
+function playClick() {
+    clickSound.currentTime = 0;
+    clickSound.play().catch(e => console.log("Audio play blocked"));
+}
+
+/* LÓGICA DE RESULTADOS */
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Recupera os dados REAIS do jogo
+    const score = parseInt(localStorage.getItem('correctCount')) || 0;
+    const total = 10; // Total fixo de perguntas
+
+    // 2. Carrega na tela
+    loadResults(score, total);
+});
+
+function loadResults(score, total) {
+    document.getElementById("correctCount").textContent = score;
+    document.getElementById("totalCount").textContent = total;
+
+    let percent = score / total;
+    let stars = 0;
+
+    // Regra das Estrelas
+    if (percent === 1) stars = 3;       // 10 acertos
+    else if (percent >= 0.6) stars = 2; // 6 a 9 acertos
+    else if (percent >= 0.3) stars = 1; // 3 a 5 acertos
+    else stars = 0;                     // 0 a 2 acertos
+
+    // Animação das estrelas (delay leve para efeito)
+    for (let i = 1; i <= stars; i++) {
+        setTimeout(() => {
+            document.getElementById("s" + i).classList.add("active");
+            playClick(); // Faz um barulhinho a cada estrela
+        }, i * 400);
+    }
+
+    const msg = document.getElementById("feedbackMsg");
+
+    if (stars === 3) {
+        msg.textContent = "🔥 ÉPICO! Você brilhou no Mapu!";
+        msg.style.color = "#FFD700"; // Dourado
+    }
+    else if (stars === 2) msg.textContent = "⚡ Muito bom! Evoluindo firme!";
+    else if (stars === 1) msg.textContent = "💪 Continue! A jornada te espera!";
+    else msg.textContent = "💀 Todo herói começa em algum lugar!";
+    
+    // Toca som de vitória apenas se tiver pelo menos 1 estrela
+    if(stars > 0) {
+        setTimeout(() => { winSound.play().catch(e => console.log("Audio blocked")); }, 1500);
+    }
+}
+
+/* BOTÕES DE REDIRECIONAMENTO */
+function retry() { 
+    playClick(); 
+    // Redireciona para a primeira questão do meio ambiente
+    window.location.href = 'sociedade_q_1.html'; 
+}
+
+function menu() { 
+    playClick(); 
+    // Redireciona para o menu de tópicos (ajuste o caminho se necessário)
+    window.location.href = '../topico.html'; 
+}
+
+/* PARTÍCULAS AUMENTADAS (sobem infinitamente) */
+const particleContainer = document.querySelector(".particles");
+
+function spawnParticle() {
+    const p = document.createElement("div");
+    p.classList.add("particle");
+    particleContainer.appendChild(p);
+
+    p.style.left = Math.random() * window.innerWidth + "px";
+    p.style.background = Math.random() > 0.5 ? "#41E18E" : "#1B2A41";
+    p.style.top = window.innerHeight + "px";
+
+    setTimeout(() => p.remove(), 5200);
+}
+
+setInterval(spawnParticle, 150);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+/* =============================== */
+/* BORDA ANIMADA NOS .explore-cards */
+/* =============================== */
+
+@property --ex-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.explore-cards {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;      /* mantém o arredondamento existente */
+  border: none !important;  /* remove a borda padrão */
+}
+
+/* Borda animada arredondada */
+.explore-cards::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 3px;            /* espessura da borda */
+  border-radius: inherit;
+
+  background: conic-gradient(
+    from var(--ex-angle),
+    #E89A61 0deg 90deg,
+    #E4C878 90deg 180deg,
+    #4DB6AC 180deg 270deg,
+    #3A88A6 270deg 360deg
+  );
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+
+  animation: explore-rotate 4s linear infinite;
+}
+
+/* Conteúdo acima da borda */
+.explore-cards > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes explore-rotate {
+  to {
+    --ex-angle: 360deg;
+  }
+}

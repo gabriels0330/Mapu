@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imgs/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../for_quiz_model-3.css">
+    <link rel="stylesheet" href="../border.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iceland&family=Jersey+10&display=swap" rel="stylesheet">
+
+    <script src="for_quiz.js"></script>
+    <title>Mapu | Regionalização</title>
+</head>
+<body data-question-number="5" data-total-questions="10">
+    <header>
+        
+        <div class="results">
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+            </div>
+            <span id="result-container">
+                <div class="result-item">Perguntas: <span id="totalAnswered"> 0</span>/10</div>
+                <div class="result-item">Acertos: <span id="correctCount"> 0</span></div>
+            </span>
+        </div>
+        <span id="question-title">A instalação de indústrias é uma forma de transformação do espaço geográfico.</span>
+    </header>
+    <main>
+        <div class="container">
+            <div class="cards verde explore-cards" data-answer="correct">
+                <p>VERDADEIRO</p>
+            </div>
+
+            <div class="cards falso explore-cards" data-answer="incorrect">
+                <p>FALSO</p>
+            </div>
+        </div>
+    </main>
+
+    <div class="check">
+        <button type="button" id="jump_button">Pular</button>
+        <div id="check_circle_content"></div>
+        <div id="resolution"><p>A IMPLANTAÇÃO DE INDÚSTRIAS ALTERA O ESPAÇO, INTRODUZINDO NOVAS ESTRUTURAS E RELAÇÕES SOCIOESPACIAIS.</p></div>
+        <button id="next" type="button" disabled>CONFERIR</button>
+        
+    </div>
+
+    <audio id="audioCorrect" src="../imgs/sond-efects/success.mp3"></audio>
+    <audio id="audioIncorrect" src="../imgs/sond-efects/failure.mp3"></audio>
+</body>
+</html>
